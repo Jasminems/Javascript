@@ -1,0 +1,33 @@
+/*A JavaScript program using apply()*/
+<!DOCTYPE html>  
+<html>  
+<head> 
+<title>JavaScript apply() method</title>
+</head> 
+<body>
+	<h2>Using apply()</h2>
+		<button onClick="fun()">Click</button>
+        <p id="name"></p> 
+        <script>
+            function fun() 
+			{
+				let p = 
+				{
+					fullName: function(addr1, addr2) 
+					{
+						return this.fName + " " + this.lName
+								+ ", " + addr1 + ", " + addr2;
+					}
+				}
+				let p1 = 
+				{
+					fName:"Jasmine",
+					lName: "Subramani",
+				}
+				//apply function:
+				let x = p.fullName.apply(p1, ["Chennai", "India"]); 
+                document.getElementById("name").innerHTML = x;
+            }
+        </script> 
+</body>  
+</html>
