@@ -1,0 +1,26 @@
+/*A JavaScript program for validation*/
+<!DOCTYPE html>
+<html>
+<head>
+<h2>JavaScript Validation</h2>
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+		<label for="fname">Name:</label>
+			<input type="text" id="fname" name="fname"><br><br>
+				<button type="submit" onclick="alert('Form Submitted')">Submit</button>
+
+</form>
+</head>
+<body>
+<script>
+	function validateForm() 
+	{
+		let x = document.forms["myForm"]["fname"].value;
+		if (x == " ") 
+		{
+			alert("The Text box does not need to be empty");
+			return false;
+		}
+	}
+</script>
+</body>
+</html>
