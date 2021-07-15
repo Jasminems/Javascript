@@ -1,0 +1,60 @@
+/*A JavaScript program to create counter using getter and setter accessors*/
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Counter using Getter and Setter</h2>
+	<h3>Result</h3>
+		<p id="demo"></p>
+<script>
+	const obj = {counter : 0};
+	Object.defineProperty(obj, "reset", 
+	{
+	//getter accessors:
+	//reset:
+		get : function () 
+		{
+			this.counter = 0;
+		}
+	});
+	Object.defineProperty(obj, "increment", 
+	{
+	//increment:
+		get : function () 
+		{	
+			this.counter++;
+		}
+	});
+	Object.defineProperty(obj, "decrement", 
+	{
+	//decrement:
+		get : function () 
+		{	
+			this.counter--;
+		}
+	});
+	Object.defineProperty(obj, "add", 
+	{
+	//setter accessors:
+	//add property
+		set : function (value) 
+		{
+			this.counter += value;
+		}
+	});
+	Object.defineProperty(obj, "subtract", 
+	{
+	//subtract:
+		set : function (value) 
+		{
+			this.counter -= value;
+		}
+	});
+obj.reset;
+obj.add = 8;
+obj.subtract = 2;
+obj.increment;
+obj.decrement;
+document.getElementById("demo").innerHTML = obj.counter;
+</script>
+</body>
+</html>
