@@ -1,0 +1,22 @@
+/*A Javascript program for Counter*/
+<!DOCTYPE html>  
+<html>  
+<head> 
+<title>Counter</title>
+</head> 
+<body>
+	<h2>Counter</h2>
+        <button onClick="fun()">Count</button>
+        <p id="co"></p> 
+        <script>
+			var button = document.getElementById("co"),
+			count = 0;
+			function fun() 
+			{
+			//increment count value:
+				count += 1;
+				button.innerHTML = "Counting: " + count;
+			};
+		</script>
+</body>
+</html>
