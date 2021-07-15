@@ -1,0 +1,15 @@
+/*A JavaScript program using JSON object*/
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript Object Notation</h2>
+<p id="demo"></p>
+<script>
+	const myJSON = '{"name":"John", "age":30, "car":null}';
+	//creating a JSON Object:
+	const myObj = JSON.parse(myJSON);
+	document.getElementById("demo").innerHTML = myObj.name;
+
+</script>
+</body>
+</html>
