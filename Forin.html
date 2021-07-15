@@ -1,0 +1,18 @@
+/*A Javascript program with FOR/IN Loop*/
+<!DOCTYPE html>
+<html>
+<body>
+<h3>JavaScript For In Loop</h3>
+	<p>The for in statement loops through the properties of an object:</p>
+	<p id="demo"></p>
+<script>
+	const person = {fname:"Claire", lname:"Elisha", age:25}; 
+	let data = "";
+	for (let x in person) 
+	{
+		data += person[x] + " ";
+	}
+	document.getElementById("demo").innerHTML = data;
+</script>
+</body>
+</html>
